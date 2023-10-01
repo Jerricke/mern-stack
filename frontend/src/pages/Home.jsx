@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react"
+
+// import components
 import WorkoutDetails from "../components/WorkoutDetails"
+import WorkoutForm from "../components/WorkoutForm"
 
 
 function Home() {
@@ -9,7 +12,7 @@ function Home() {
   useEffect( () => {
     const fetchWorkouts = async () => {
       const response = await fetch('/api/workouts')
-      console.log(response)
+
       const json = await response.json()
       if (response.ok) {
         setWorkouts(json)
@@ -27,6 +30,7 @@ function Home() {
         ))
         }
       </div>
+      <WorkoutForm />
     </div>
   )
 }
