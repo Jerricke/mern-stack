@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useWorkoutsContext } from "./hooks/userWorkoutsContext"
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 
 //date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
