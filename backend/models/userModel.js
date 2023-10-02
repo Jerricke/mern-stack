@@ -19,7 +19,7 @@ const userSchema = new Schema({
 // static signup method
 userSchema.statics.signup = async function(email, password){
 
-    //validation
+    // validation
     if (!email || !password) {
         throw Error('All fields must be filled.')
     }
@@ -30,6 +30,7 @@ userSchema.statics.signup = async function(email, password){
         throw Error('Password is not strong enough')
     }
 
+    // check if email is unique
     const exists = await this.findOne({ email });
 
     if (exists) {
