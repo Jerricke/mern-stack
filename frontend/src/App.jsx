@@ -22,7 +22,7 @@ function App() {
             <Route path='/signup' element={!user ? <Singup /> : <Navigate to='/'/>} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </BrowserRouter> 
     </div>
   )
 }
